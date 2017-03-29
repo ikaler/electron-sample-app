@@ -1,0 +1,43 @@
+{
+  "name": "electron-sample-app",
+  "productName": "Electron-App",
+  "version": "0.1.1",
+  "appVersion": "0.0.1",
+  "buildVersion": "10",
+  "electronVersion": "1.6.2",
+  "description": "Sample app using electron",
+  "main": "./src/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "devtron": "^1.4.0",
+    "electron": "^1.6.2",
+    "electron-packager": "^8.6.0",
+    "shelljs": "^0.7.7"
+  },
+  "scripts": {
+    "start": "electron ./src",
+    "dev": "electron ./src --debug",
+    "clean": "node ./scripts/build-clean.js",
+    "clean-tmp": "node ./scripts/build-clean.js tmpOnly",
+    "build": "node ./scripts/build.js",
+    "build-mac": "npm run build darwin x64",
+    "build-linux": "npm run build linux x64",
+    "build-linux32": "npm run build linux ia32",
+    "build-all": "npm run build-mac && npm run build-linux && npm run build-linux32 && npm run clean-tmp",
+    "build-clean": "npm run clean && npm run build-all",
+    "package": "node ./scripts/package-all.js",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikaler/electron-sample-app.git"
+  },
+  "keywords": [
+    "electron",
+    "electron sample app",
+    "electron base app",
+    "electron skeleton app",
+    "nodejs"
+  ],
+  "author": "Inderjeet Kaler <inderjeet@gmail.com>",
+  "license": "ISC"
+}
