@@ -2,8 +2,17 @@
 
 This is a base project for Electron apps.
 
-## Create project:
+## Using
 
-    $ composer create-project --no-interaction --stability=dev ikaler/electron-sample-app my-app
+You can download the latest release from [here](https://github.com/ikaler/electron-sample-app/releases) or build it yourself (see below).
 
-Replace `my-app` with the desired directory name for your new application.
+## Building
+
+You'll need [Node.js](https://nodejs.org) installed on your computer in order to build this app.
+
+```bash
+$ git clone https://github.com/ikaler/electron-sample-app
+$ cd electron-sample-app
+$ npm install
+$ npm start
+```
